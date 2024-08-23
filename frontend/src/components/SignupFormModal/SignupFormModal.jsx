@@ -1,12 +1,10 @@
-import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import { Navigate } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useModal } from '../../context/Modal';
 import * as sessionActions from '../../store/session';
-import './SignupForm.css';
 
-function SignupFormPage() {
+function SignupFormModal() {
   const dispatch = useDispatch();
-  const sessionUser = useSelector((state) => state.session.user);
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -14,8 +12,14 @@ function SignupFormPage() {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [errors, setErrors] = useState({});
+  const { closeModal } = useModal();
 
-  if (sessionUser) return <Navigate to="/" replace={true} />;
+  useEffect(() => {
+    const errs = {};
+    if (username.length < 4) errs.username = " ";
+    if (password.length < 6) errs.password = " ";
+    setErrors(errs);
+  }, [username, password])
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -29,12 +33,14 @@ function SignupFormPage() {
           lastName,
           password
         })
-      ).catch(async (res) => {
-        const data = await res.json();
-        if (data?.errors) {
-          setErrors(data.errors);
-        }
-      });
+      )
+        .then(closeModal)
+        .catch(async (res) => {
+          const data = await res.json();
+          if (data?.errors) {
+            setErrors(data.errors);
+          }
+        });
     }
     return setErrors({
       confirmPassword: "Confirm Password field must be the same as the Password field"
@@ -42,7 +48,7 @@ function SignupFormPage() {
   };
 
   return (
-    <>
+    <div className='sign_up_container'>
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
         <label>
@@ -51,64 +57,69 @@ function SignupFormPage() {
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            required
+            // required
           />
         </label>
-        {errors.email && <p>{errors.email}</p>}
+        {errors.email && <p className='error_message'>{errors.email}</p>}
         <label>
           Username
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
-            required
+            // required
           />
         </label>
-        {errors.username && <p>{errors.username}</p>}
+        {errors.username && <p className='error_message'>{errors.username}</p>}
         <label>
           First Name
           <input
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
-            required
+            // required
           />
         </label>
-        {errors.firstName && <p>{errors.firstName}</p>}
+        {errors.firstName && <p className='error_message'>{errors.firstName}</p>}
         <label>
           Last Name
           <input
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
-            required
+            // required
           />
         </label>
-        {errors.lastName && <p>{errors.lastName}</p>}
+        {errors.lastName && <p className='error_message'>{errors.lastName}</p>}
         <label>
           Password
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            required
+            // required
           />
         </label>
-        {errors.password && <p>{errors.password}</p>}
+        {errors.password && <p className='error_message'>{errors.password}</p>}
         <label>
           Confirm Password
           <input
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
-            required
+            // required
           />
         </label>
-        {errors.confirmPassword && <p>{errors.confirmPassword}</p>}
-        <button type="submit">Sign Up</button>
+        {errors.confirmPassword && (
+          <p className='error_message'>{errors.confirmPassword}</p>
+        )}
+        <button 
+        type="submit"
+        disabled={Object.values(errors).length > 0}>Sign Up
+        </button>
       </form>
-    </>
+    </div>
   );
 }
 
-export default SignupFormPage;
+export default SignupFormModal;
