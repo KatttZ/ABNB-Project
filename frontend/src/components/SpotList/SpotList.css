@@ -1,0 +1,14 @@
+.spotsList_container {
+    display: grid;
+    grid-template-columns:repeat(4, 1fr);
+    margin: 10px;
+    /* display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    margin: 70px; */
+}
+
+.each_spot_container {
+    width: 200px;
+    margin: 20px 20px 0px 0px;
+}
