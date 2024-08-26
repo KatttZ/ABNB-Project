@@ -1,0 +1,28 @@
+.profile-dropdown {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+  }
+  
+  .profile-wrapper {
+    position: relative;
+    width: 100px;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .nav_ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    padding: 50px;
+    border-bottom: 1px solid lightgray;
+  }
+
+#logo img{
+    height: 40px;
+}

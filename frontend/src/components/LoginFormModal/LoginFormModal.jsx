@@ -64,7 +64,7 @@ function LoginFormModal() {
 //           <p>{errors.credential}</p>
 //         )} */}
         {errors.message && (
-          <p>{errors.message}</p>
+          <p className='error_message'>{errors.message}</p>
         )}
         <button 
         type="submit"
