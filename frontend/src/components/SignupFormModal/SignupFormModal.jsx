@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useModal } from '../../context/Modal';
 import * as sessionActions from '../../store/session';
+import './SignupForm.css'
 
 function SignupFormModal() {
   const dispatch = useDispatch();
@@ -52,61 +53,67 @@ function SignupFormModal() {
       <h1>Sign Up</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Email
+          {/* Email */}
           <input
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            placeholder='Email'
             // required
           />
         </label>
         {errors.email && <p className='error_message'>{errors.email}</p>}
         <label>
-          Username
+          {/* Username */}
           <input
             type="text"
             value={username}
             onChange={(e) => setUsername(e.target.value)}
+            placeholder='Username'
             // required
           />
         </label>
         {errors.username && <p className='error_message'>{errors.username}</p>}
         <label>
-          First Name
+          {/* First Name */}
           <input
             type="text"
             value={firstName}
             onChange={(e) => setFirstName(e.target.value)}
+            placeholder='First Name'
             // required
           />
         </label>
         {errors.firstName && <p className='error_message'>{errors.firstName}</p>}
         <label>
-          Last Name
+          {/* Last Name */}
           <input
             type="text"
             value={lastName}
             onChange={(e) => setLastName(e.target.value)}
+            placeholder='Last Name'
             // required
           />
         </label>
         {errors.lastName && <p className='error_message'>{errors.lastName}</p>}
         <label>
-          Password
+          {/* Password */}
           <input
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
+            placeholder='Password'
             // required
           />
         </label>
         {errors.password && <p className='error_message'>{errors.password}</p>}
         <label>
-          Confirm Password
+          {/* Confirm Password */}
           <input
             type="password"
             value={confirmPassword}
             onChange={(e) => setConfirmPassword(e.target.value)}
+            placeholder='Confirm Password'
             // required
           />
         </label>

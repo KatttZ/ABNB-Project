@@ -1,1 +1,6 @@
 /* TODO: Add sitewide styles */
+
+.error_message {
+    color: red;
+    font-size:15px;
+}
