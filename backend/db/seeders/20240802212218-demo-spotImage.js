@@ -12,22 +12,62 @@ if (process.env.NODE_ENV === 'production') {
 const spotImages = [
   {
     spotId:1,
-    url:'spotImage1',
+    url:'https://placehold.co/200X150',
     preview:true
   },
   {
     spotId:2,
-    url:'spotImage2',
+    url:'https://placehold.co/200X150',
     preview:true
   },
   {
     spotId:3,
-    url:'spotImage3',
+    url:'https://placehold.co/200X150',
     preview:true
   },
   {
     spotId: 4,
-    url: 'spotImage4',
+    url: 'https://placehold.co/200X150',
+    preview: true
+  },
+  {
+    spotId: 5,
+    url: 'https://placehold.co/200X150',
+    preview: true
+  },
+  {
+    spotId: 6,
+    url: 'https://placehold.co/200X150',
+    preview: true
+  },
+  {
+    spotId: 7,
+    url: 'https://placehold.co/200X150',
+    preview: true
+  },
+  {
+    spotId: 8,
+    url: 'https://placehold.co/200X150',
+    preview: true
+  },
+  {
+    spotId: 9,
+    url: 'https://placehold.co/200X150',
+    preview: true
+  },
+  {
+    spotId: 10,
+    url: 'https://placehold.co/200X150',
+    preview: true
+  },
+  {
+    spotId: 11,
+    url: 'https://placehold.co/200X150',
+    preview: true
+  },
+  {
+    spotId: 12,
+    url: 'https://placehold.co/200X150',
     preview: true
   },
 ]
