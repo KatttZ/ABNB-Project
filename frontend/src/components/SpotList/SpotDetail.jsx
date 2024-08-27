@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { getOneSpot } from "../../store/spot";
+import SpotImage from "../SpotImage";
 
 const SpotDetail = () => {
   const { spotId } = useParams();
@@ -23,6 +24,7 @@ const SpotDetail = () => {
       <p>
         {spot.city}, {spot.state}, {spot.country}
       </p>
+      <SpotImage spotId={spotId}/>
       <div>
         <div>
           <h2>
@@ -30,9 +32,9 @@ const SpotDetail = () => {
           </h2>
           <p>{spot.description}</p>
         </div>
-
-        <span id="spot_price">${spot.price}</span>
-        <span>night</span>
+        
+        <span>${spot.price}</span>
+        <span> night</span>
       </div>
     </div>
   );

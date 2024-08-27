@@ -16,9 +16,49 @@ const spotImages = [
     preview:true
   },
   {
+    spotId:1,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
+    spotId:1,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
+    spotId:1,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
+    spotId:1,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
     spotId:2,
     url:'https://placehold.co/200X150',
     preview:true
+  },
+  {
+    spotId:2,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
+    spotId:2,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
+    spotId:2,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
+    spotId:2,
+    url:'https://placehold.co/200X150',
+    preview:false
   },
   {
     spotId:3,
@@ -26,9 +66,49 @@ const spotImages = [
     preview:true
   },
   {
+    spotId:3,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
+    spotId:3,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
+    spotId:3,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
+    spotId:3,
+    url:'https://placehold.co/200X150',
+    preview:false
+  },
+  {
     spotId: 4,
     url: 'https://placehold.co/200X150',
     preview: true
+  },
+  {
+    spotId: 4,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 4,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 4,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 4,
+    url: 'https://placehold.co/200X150',
+    preview: false
   },
   {
     spotId: 5,
@@ -36,9 +116,49 @@ const spotImages = [
     preview: true
   },
   {
+    spotId: 5,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 5,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 5,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 5,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
     spotId: 6,
     url: 'https://placehold.co/200X150',
     preview: true
+  },
+  {
+    spotId: 6,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 6,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 6,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 6,
+    url: 'https://placehold.co/200X150',
+    preview: false
   },
   {
     spotId: 7,
@@ -46,9 +166,49 @@ const spotImages = [
     preview: true
   },
   {
+    spotId: 7,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 7,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 7,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 7,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
     spotId: 8,
     url: 'https://placehold.co/200X150',
     preview: true
+  },
+  {
+    spotId: 8,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 8,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 8,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 8,
+    url: 'https://placehold.co/200X150',
+    preview: false
   },
   {
     spotId: 9,
@@ -56,9 +216,50 @@ const spotImages = [
     preview: true
   },
   {
+    spotId: 9,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 9,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 9,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 9,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+
+  {
     spotId: 10,
     url: 'https://placehold.co/200X150',
     preview: true
+  },
+  {
+    spotId: 10,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 10,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 10,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 10,
+    url: 'https://placehold.co/200X150',
+    preview: false
   },
   {
     spotId: 11,
@@ -66,9 +267,49 @@ const spotImages = [
     preview: true
   },
   {
+    spotId: 11,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 11,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 11,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 11,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
     spotId: 12,
     url: 'https://placehold.co/200X150',
     preview: true
+  },
+  {
+    spotId: 12,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 12,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 12,
+    url: 'https://placehold.co/200X150',
+    preview: false
+  },
+  {
+    spotId: 12,
+    url: 'https://placehold.co/200X150',
+    preview: false
   },
 ]
 module.exports = {

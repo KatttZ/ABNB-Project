@@ -5,3 +5,6 @@
     font-size:15px;
 }
 
+button {
+    cursor: pointer;
+}
