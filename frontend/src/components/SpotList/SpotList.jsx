@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { getAllSpots } from "../../store/spot";
@@ -29,7 +29,7 @@ const SpotList = () => {
               <div>
                 {spot.city}, {spot.state}
               </div>
-              <div>⭐️ {spot.avgRating}</div>
+              <div>⭐️ {spot.avgRating && spot.avgRating !== "No rating yet." ? spot.avgRating : "New"}</div>
               <span>${spot.price}</span>
               <span> night</span>
             </div>

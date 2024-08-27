@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigation } from "react-router-dom";
+import { useNavigation, Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import * as sessionActions from "../../store/session";
 import OpenModalMenuItem from "./OpenModalMenuItem";
@@ -45,15 +45,19 @@ function ProfileButton({ user }) {
   const ulClassName = "profile-dropdown" + (showMenu ? "" : " hidden");
 
   return (
-    <div className="profile-wrapper">
+    <div className='profile-wrapper'>
+      <div className='profile_container'>
+      {user && <div id='create_link'><Link to={'/spots/new'}>Create a New Spot</Link></div>}
       <button onClick={toggleMenu}>
         <FaUserCircle />
       </button>
+      </div>
       <ul className={ulClassName} ref={ulRef}>
         {user ? (
           <>
             <li>Hello, {user.firstName}</li>
             <li>{user.email}</li>
+            <li><Link to={'/spots/current'}>Manage Spots</Link></li>
             <li>
               <button onClick={logout}>Log Out</button>
             </li>
@@ -65,7 +69,7 @@ function ProfileButton({ user }) {
               onItemClick={closeMenu}
               modalComponent={<SignupFormModal />}
             />
-            <OpenModalMenuItem
+              <OpenModalMenuItem
               itemText="Log In"
               onItemClick={closeMenu}
               modalComponent={<LoginFormModal />}
