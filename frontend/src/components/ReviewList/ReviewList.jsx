@@ -1,11 +1,14 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { getSpotReviews } from "../../store/review";
-
-
+import { deleteReview, getSpotReviews } from "../../store/review";
+import { useModal } from '../../context/Modal';
+import ConfirmDeleteModal from "../ConfirmDeletionModal";
+import ReviewFormModal from "../ReviewFormModal";
+import './ReviewList.css';
 
 const ReviewList = ({ spotId }) => {
     const dispatch = useDispatch();
+    const { setModalContent, setOnModalClose, closeModal } = useModal();
 
     const reviews = useSelector((state) => state.reviews[spotId]);
     const currentSpot = useSelector((state) => state.spots[spotId]);
@@ -22,10 +25,27 @@ const ReviewList = ({ spotId }) => {
     const hasReviewed = hasReviews && currentUser && reviews.Reviews.some(review => review.userId === currentUser.id);
     const isOwner = currentUser && currentSpot && currentUser.id === currentSpot.ownerId;
 
+    const openReviewModal = () => {
+        setOnModalClose(() => {});
+        setModalContent(<ReviewFormModal spotId={spotId} onSubmitSuccess={() => dispatch(getSpotReviews(spotId))}
+/>);
+    };
 
+    const handleDeleteClick = (reviewId) => {
+        setModalContent(
+            <ConfirmDeleteModal
+                onDelete={() => handleDeleteConfirm(reviewId, spotId)}
+                onClose={closeModal}
+                message="Are you sure you want to delete this review?"
+                type="Review"
+            />
+        );
+    };
 
-
-  
+    const handleDeleteConfirm = async (reviewId, spotId) => {
+        await dispatch(deleteReview(reviewId, spotId));
+        closeModal();
+    };
 
     return (
         <div className="reviewlist_container">
@@ -35,7 +55,7 @@ const ReviewList = ({ spotId }) => {
                         ⭐️ {averageRating} · {reviews.Reviews.length} {reviews.Reviews.length === 1 ? "Review" : "Reviews"}
                     </h3>
                     {!hasReviewed && !isOwner && currentUser && (
-                        <button className="post-review-button" >
+                        <button className="post-review-button" onClick={openReviewModal}>
                             Post Your Review
                         </button>
                     )}
@@ -48,7 +68,11 @@ const ReviewList = ({ spotId }) => {
                                 <h3>{review.User?.firstName || (currentUser && currentUser.firstName)}</h3>
                                 <p>{formattedDate}</p>
                                 <p>{review.review}</p>
-                            
+                                {currentUser && currentUser.id === review.userId && !isOwner && (
+                                    <button className="delete-review-button" onClick={() => handleDeleteClick(review.id)}>
+                                        Delete
+                                    </button>
+                                )}
                             </div>
                         );
                     })}
@@ -58,7 +82,7 @@ const ReviewList = ({ spotId }) => {
                     <>
                         <h2>⭐️ New</h2>
                         <p>Be the first to post a review!</p>
-                        <button className="post-review-button" >
+                        <button className="post-review-button" onClick={openReviewModal}>
                             Post Your Review
                         </button>
                     </>

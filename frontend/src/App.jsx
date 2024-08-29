@@ -4,8 +4,10 @@ import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Navigation from "./components/Navigation";
 import * as sessionActions from "./store/session";
 import SpotList from "./components/SpotList";
-import SpotDetail from "./components/SpotList/SpotDetail";
-import CreateSpot from "./components/SpotForm/CreateSpot";
+import SpotDetail from "./components/SpotDetail";
+import CreateSpot from "./components/CreateSpotForm";
+import ManageSpots from "./components/ManageSpots";
+import EditSpot from "./components/EditSpotForm";
 
 function Layout() {
   const dispatch = useDispatch();
@@ -29,10 +31,6 @@ const router = createBrowserRouter([
   {
     element: <Layout />,
     children: [
-      // {
-      //   path: '/',
-      //   element: <h1>Welcome!</h1>
-      // },
       {
         path: "/",
         element: <SpotList />,
@@ -45,10 +43,15 @@ const router = createBrowserRouter([
         path:'/spots/new',
         element:<CreateSpot />
       },
-      // {
-      //   path: '/spots/current',
-      //   element: <SpotManage />
-      // }
+      {
+        path: '/spots/:spotId/edit',
+        element: <EditSpot />
+      },
+      {
+        path: '/spots/current',
+        element: <ManageSpots />
+      },
+    
     ],
   },
 ]);

@@ -4,9 +4,9 @@ import { Link } from "react-router-dom";
 import { loadCurrentSpots, deleteSpot } from "../../store/spot";
 import { useModal } from '../../context/Modal';
 import ConfirmDeleteModal from '../ConfirmDeletionModal';
-import './SpotList.css'
+import './ManageSpots.css'
 
-const SpotManage = () => {
+const ManageSpots = () => {
     const { setModalContent, closeModal } = useModal();
 
     const dispatch = useDispatch();
@@ -73,4 +73,4 @@ const SpotManage = () => {
         </div>
 )};
     
-export default SpotManage;
+export default ManageSpots;
