@@ -1,3 +1,23 @@
+
+
+.review_form {
+  display: grid;
+  margin: 20px;
+
+}
+
+.review_form textarea{
+  height: 50px;
+}
+
 .star_div {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  column-gap: 10px;
   margin: 10px auto;
+}
+
+.star_div span {
+  display: flex;
+  align-items: center;
 }

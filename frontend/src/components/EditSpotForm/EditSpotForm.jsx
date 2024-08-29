@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { getOneSpot } from "../../store/spot";
 import { useState, useEffect } from "react";
 import { editSpot } from "../../store/spot";
+// import './EditSpotForm.css'
 
 const EditSpot = () => {
   const { spotId } = useParams();
@@ -208,7 +209,7 @@ const EditSpot = () => {
               {errors.name && <p className="error_message">{errors.name}</p>}
             </div>
 
-            <div className="spot_price">
+            <div className="update_spot_price">
               <h2>Set a base price for your spot</h2>
               <p>
                 Competitive pricing can help your listing stand out and rank

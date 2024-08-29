@@ -1,0 +1,63 @@
+.spotDetail_container {
+  display: flex;
+  flex-direction: column;
+  margin: 30px;
+}
+
+.spotDetail_container h2 {
+  font-size: 30px;
+  margin: 10px 0px;
+}
+.spotDetail_inner_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-bottom: solid 1px lightgray;
+  padding: 30px 0px;
+}
+
+.spotDetail_description {
+  width: 60%;
+}
+
+.reservation_container {
+  border: solid 1px lightgrey;
+  box-shadow: 2px 2px 2px lightgray;
+  border-radius: 10px;
+  width: 30%;
+  padding: 20px;
+  margin: 10px 0px;
+}
+
+
+.reservation_container * {
+  margin: 5px 0px;
+}
+
+#spot_price {
+  font-size: x-large;
+  font-weight: bold;
+  color: #ff5a60;
+  padding-right: 5px;
+  text-align: start;
+}
+
+.star_rating {
+    padding-left: 50px;
+  }
+
+.reservation_container button {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: #ff5a60;
+  width: 95%;
+}
+
+.reservation_container button:hover {
+  cursor: pointer;
+  background-color: #fb7a7e;
+}

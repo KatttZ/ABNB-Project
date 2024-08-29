@@ -40,27 +40,26 @@ const ManageSpots = () => {
     };
 
     return (
-        <div className="current_spotlist_container">
+        <div className="current_spotList_container">
             <h1>Manage Spots</h1>
-            <button><Link to={"/spots/new"}>Create a New Spot</Link></button>
+            <button className="create_spot"><Link to={"/spots/new"}>Create a New Spot</Link></button>
 
             <div className="current_image_container">
             {filteredSpots
             .sort((a, b) => b.id - a.id)
             .map((spot) => (
-            <div key={spot.id} className="spotlist_small_container">
-            <Link key={spot.id} to={`/spots/${spot.id}`} className="spotlist_small_container_link">
+            <div key={spot.id} className="spotList_small_container">
+            <Link key={spot.id} to={`/spots/${spot.id}`} className="spotList_small_container_link">
             <img src={spot.previewImage} alt={spot.name} />
-                {/* <h4>{spot.name}</h4> */}
 
-                <div className='spotlist_preview'>
+                <div className='spotList_preview'>
                 <span>{spot.city}, {spot.state}</span>
                 <span>⭐️ {spot.avgRating && spot.avgRating !== "No rating yet." ? spot.avgRating : "New"}</span>
                 </div>
-                <span className='spotlist_preview_price'>${spot.price}</span><span> night</span>
+                <span className='spotList_price'>${spot.price}</span><span> night</span>
             </Link>
 
-            <div className="current_spotlist_buttons">
+            <div className="current_spotList_buttons">
                 <button><Link to={`/spots/${spot.id}/edit`}>Update</Link></button>
                 <button onClick={() => handleDeleteClick(spot.id)}>Delete</button>
             </div>

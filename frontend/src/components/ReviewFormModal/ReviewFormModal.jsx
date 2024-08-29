@@ -30,7 +30,10 @@ const ReviewFormModal = ({ spotId, onSubmitSuccess }) => {
         value={review}
         onChange={(e) => setReview(e.target.value)}
       />
-      <div className='star_div'><span>Stars:</span><span><StarRating rating={stars} setRating={setStars}/></span></div>
+      <div className='star_div'>
+        <span><StarRating rating={stars} setRating={setStars}/></span>
+        <span>Stars</span>
+      </div>
       <button type="submit" disabled={review.length < 10 || stars === 0}>
         Submit Your Review
       </button>

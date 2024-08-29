@@ -21,7 +21,6 @@ const ReviewList = ({ spotId }) => {
     const hasReviews = reviews && reviews.Reviews.length > 0;
     const totalStars = hasReviews ? reviews.Reviews.reduce((sum, review) => sum + review.stars, 0) : 0;
     const averageRating = hasReviews ? (totalStars / reviews.Reviews.length).toFixed(1) : null;
-
     const hasReviewed = hasReviews && currentUser && reviews.Reviews.some(review => review.userId === currentUser.id);
     const isOwner = currentUser && currentSpot && currentUser.id === currentSpot.ownerId;
 
@@ -93,3 +92,5 @@ const ReviewList = ({ spotId }) => {
 };
 
 export default ReviewList;
+
+

@@ -1,0 +1,28 @@
+.confirm_deletion {
+  display: grid;
+  text-align: center;
+  padding: 20px;
+}
+
+.confirm_deletion button {
+  margin: 5px;
+}
+
+#red_button {
+  border-radius: 2px;
+  color: white;
+  background-color: #f86b70;
+}
+#red_button:hover {
+  background-color: #ef4348;
+}
+
+#dark_grey_button {
+  border-radius: 2px;
+  color: white;
+  background-color: rgb(139, 138, 138);
+}
+
+#dark_grey_button:hover {
+  background-color: rgb(94, 94, 94);
+}

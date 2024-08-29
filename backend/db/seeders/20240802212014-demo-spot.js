@@ -96,8 +96,8 @@ const spots = [
   {
     ownerId: 3,
     address: "456 Vivian",
-    city: "San Francisco",
-    state: "California",
+    city: "Chicago",
+    state: "Illinois",
     country: "United States of America",
     lat: 85.7645358,
     lng: -106.4730327,
@@ -144,8 +144,8 @@ const spots = [
   {
     ownerId: 4,
     address: "443 Vivian",
-    city: "San Francisco",
-    state: "California",
+    city: "Seattle",
+    state: "Washington",
     country: "United States of America",
     lat: 71.7645358,
     lng: -106.4730327,

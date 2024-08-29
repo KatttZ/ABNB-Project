@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { createSpot, addImage } from "../../store/spot";
+import './CreateSpotForm.css'
 
 const CreateSpot = (spot = {}) => {
   const navigate = useNavigate();
@@ -215,7 +216,7 @@ const CreateSpot = (spot = {}) => {
           {errors.name && <p className="error_message">{errors.name}</p>}
         </div>
 
-        <div className="spot_price">
+        <div className="create_spot_price">
           <h2>Set a base price for your spot</h2>
           <p>
             Competitive pricing can help your listing stand out and rank higher

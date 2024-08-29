@@ -1,0 +1,82 @@
+.spotList_small_container {
+  width: 200px;
+  margin: 20px 20px 0px 0px;
+}
+
+.spotList_small_container_link {
+  text-decoration: none;
+  color: black;
+}
+
+.spotList_small_container img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.spotList_preview {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.spotList_price {
+  font-weight: bold;
+}
+
+.current_spotList_container {
+  margin: 30px 80px;
+}
+
+.current_image_container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+
+.current_spotList_buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current_spotList_container a {
+  text-decoration: none;
+}
+
+.current_spotList_container button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #ff5a60;
+  width: 200px;
+  margin: 5px 0px 20px;
+}
+
+.current_spotList_container button:hover {
+  cursor: pointer;
+  background-color: #fb7a7e;
+}
+
+.current_spotList_buttons button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  background-color: #ff5a60;
+  width: 40%;
+  margin: 10px 5px;
+}
+
+.current_spotList_buttons button a {
+  color: white;
+}
+
+.create_spot a {
+  color: white;
+}
+
+.current_spotList_buttons button:hover {
+  cursor: pointer;
+  background-color: #fb7a7e;
+}
