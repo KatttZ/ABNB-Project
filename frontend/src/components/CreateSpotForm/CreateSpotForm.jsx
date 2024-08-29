@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { createSpot, addImage } from "../../store/spot";
 
-const CreateSpot = ({ spot = {} }) => {
+const CreateSpot = (spot = {}) => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [country, setCountry] = useState("");

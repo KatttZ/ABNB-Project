@@ -1,14 +1,40 @@
 .spotsList_container {
-    display: grid;
-    grid-template-columns:repeat(4, 1fr);
-    margin: 10px;
-    /* display: flex;
-    flex-wrap: wrap;
-    justify-content: start;
-    margin: 70px; */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 10px;
 }
 
-.each_spot_container {
-    width: 200px;
-    margin: 20px 20px 0px 0px;
+.spot_container {
+  width: 200px;
+  margin: 10px 10px 0px 0px;
+}
+
+.spot_container img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.spot_link {
+  text-decoration: none;
+  color: black;
+}
+
+.spot_preview {
+  display: flex;
+  margin-top: 5px;
+  justify-content: space-between;
+}
+
+.spot_price {
+  font-weight: bold;
+}
+
+.tooltip {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 250px;
+  text-align: center;
+  font-weight: bold;
 }
