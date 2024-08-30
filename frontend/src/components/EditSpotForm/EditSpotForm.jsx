@@ -44,7 +44,7 @@ const EditSpot = () => {
   const validateForm = () => {
     let error = {};
     if (!country) error.country = "Country is required";
-    if (!address) error.streetaddress = "Street address is required";
+    if (!address) error.address = "Street address is required";
     if (!city) error.city = "City is required";
     if (!state) error.state = "State is required";
     if (!lat || lat > 90 || lat < -90)
@@ -123,8 +123,8 @@ const EditSpot = () => {
                   onChange={(e) => setAddress(e.target.value)}
                 />
               </label>
-              {errors.streetaddress && (
-                <p className="error_message">{errors.streetaddress}</p>
+              {errors.address && (
+                <p className="error_message">{errors.address}</p>
               )}
 
               <div className="city_state">
@@ -174,7 +174,7 @@ const EditSpot = () => {
               </div>
             </div>
 
-            <div className="sopt_detailed_description">
+            <div className="spot_detailed_description">
               <h2>Describe your place to guests</h2>
               <p>
                 Mention the best features of your space, any special amentities
@@ -193,7 +193,7 @@ const EditSpot = () => {
               )}
             </div>
 
-            <div className="sopt_name">
+            <div className="spot_name">
               <h2>Create a title for your spot</h2>
               <p>
                 Catch guests&apos; attention with a spot title that highlights
