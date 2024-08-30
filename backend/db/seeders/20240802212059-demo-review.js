@@ -12,25 +12,73 @@ if (process.env.NODE_ENV === 'production') {
 const reviews = [
   {
     spotId: 1,
-    userId: 1,
+    userId: 2,
     review:"This was an awesome spot!",
     stars:5
   },
   {
+    spotId: 1,
+    userId: 4,
+    review: "Great hideaway, super place to decompress and take in the nature.",
+    stars: 5.0
+  },
+  {
     spotId: 2,
-    userId: 2,
+    userId: 3,
     review:"This was a very unique experience.",
     stars:5
   },
   {
+    spotId: 2,
+    userId: 4,
+    review:"This was a very unique experience.",
+    stars:4
+  },
+  {
     spotId: 3,
-    userId: 3,
+    userId: 4,
     review:"Great experience and location for a scenic getaway!",
     stars:4
   },
   {
-    userId: 4,
-    spotId: 1,
+    spotId: 3,
+    userId: 1,
+    review:"Great experience and location for a scenic getaway!",
+    stars:4
+  },
+  {
+    spotId: 4,
+    userId: 3,
+    review: "Great hideaway, super place to decompress and take in the nature.",
+    stars: 5.0
+  },
+  {
+    spotId: 4,
+    userId: 1,
+    review: "Great hideaway, super place to decompress and take in the nature.",
+    stars: 5.0
+  },
+  {
+    spotId: 5,
+    userId: 1,
+    review: "Great hideaway, super place to decompress and take in the nature.",
+    stars: 5.0
+  },
+  {
+    spotId: 5,
+    userId: 2,
+    review: "Great hideaway, super place to decompress and take in the nature.",
+    stars: 5.0
+  },
+  {
+    spotId: 8,
+    userId: 1,
+    review: "Great hideaway, super place to decompress and take in the nature.",
+    stars: 5.0
+  },
+  {
+    spotId: 8,
+    userId: 2,
     review: "Great hideaway, super place to decompress and take in the nature.",
     stars: 5.0
   },
