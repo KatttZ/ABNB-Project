@@ -1,7 +1,11 @@
 .spotsList_container {
-  display: grid;
+  /* display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin: 30px 50px ;
+  margin: 30px 50px ; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+  margin: 70px;
 }
 
 .spot_container {
@@ -15,6 +19,15 @@
   width: 200px;
   object-fit: cover;
   border-radius: 10px;
+}
+
+.spot_container h4 {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  bottom: 230px;
+  text-align: center;
+  font-weight: 550;
 }
 
 .spot_link {
@@ -32,11 +45,9 @@
   font-weight: bold;
 }
 
-.tooltip {
+.no-show {
   color: white;
-  background-color: rgba(0, 0, 0, 0.2);
-  position: relative;
-  bottom: 250px;
-  text-align: center;
-  font-weight: bold;
 }
+
+
+

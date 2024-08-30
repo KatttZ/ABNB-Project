@@ -12,7 +12,7 @@ function Navigation({ isLoaded }) {
     <ul className='nav_ul'>
        <li id="logo">
      {/* <NavLink to="/">Home</NavLink> */}
-         <NavLink to="/"><img src={logo} alt="Logo" /></NavLink>
+         <NavLink to="/"><img src={logo} alt="Logo" />VBnb</NavLink>
       </li>
       {isLoaded && (
         <li>

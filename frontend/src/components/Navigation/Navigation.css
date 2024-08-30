@@ -22,7 +22,15 @@
     padding: 50px 100px;
     border-bottom: 1px solid lightgray;
   }
+#logo {
+  display: inline;
+}
 
 #logo img{
     height: 40px;
+}
+
+#logo a {
+  text-decoration: none;
+  color: black;
 }

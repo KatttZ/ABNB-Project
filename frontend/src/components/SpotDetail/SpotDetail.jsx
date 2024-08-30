@@ -13,13 +13,6 @@ const SpotDetail = () => {
 
   const spot = useSelector((state) => state.spots[spotId]);
   const reviews = useSelector((state) => state.reviews[spotId]);
-  const hasReviews = reviews && reviews.Reviews.length > 0;
-  const totalStars = hasReviews
-    ? reviews.Reviews.reduce((sum, review) => sum + review.stars, 0)
-    : 0;
-  const averageRating = hasReviews
-    ? (totalStars / reviews.Reviews.length).toFixed(1)
-    : null;
 
   useEffect(() => {
     dispatch(getOneSpot(spotId));
@@ -28,17 +21,22 @@ const SpotDetail = () => {
 
   if (!spot || !spot.Owner) return null;
 
-  console.log("spot:", spot);
+  const hasReviews = reviews && reviews.Reviews.length > 0;
+  const totalStars = hasReviews
+    ? reviews.Reviews.reduce((sum, review) => sum + review.stars, 0)
+    : 0;
+  const averageRating = hasReviews
+    ? (totalStars / reviews.Reviews.length).toFixed(1)
+    : null;
 
   const handleReservation = () => {
     alert("Feature coming soon");
   };
+
   return (
     <div className="spotDetail_container">
       <h2>{spot.name}</h2>
-      <p>
-        {spot.city}, {spot.state}, {spot.country}
-      </p>
+      <p>{spot.city}, {spot.state}, {spot.country}</p>
       <SpotImage spotId={spotId} />
 
       <div className="spotDetail_inner_container">
@@ -50,7 +48,7 @@ const SpotDetail = () => {
         </div>
 
         <div className="reservation_container">
-          <div >
+          <div>
             <span id="spot_price">${spot.price}</span>
             <span> /night</span>
 
@@ -61,7 +59,9 @@ const SpotDetail = () => {
           </div>
           <button onClick={handleReservation}>Reserve</button>
         </div>
+
       </div>
+      
       <ReviewList spotId={spotId} />
     </div>
   );

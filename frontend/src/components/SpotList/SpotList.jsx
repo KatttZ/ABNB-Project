@@ -42,7 +42,8 @@ const SpotList = () => {
             <span className="spot_price">${spot.price}</span>
             <span> night</span>
           </Link>
-          {toolTip === spot.id && <h4 className="tooltip">{spot.name}</h4>}
+          {toolTip === spot.id? <h4 >{spot.name}</h4> : <h3 className="no-show">Keeping Space</h3>}
+                
         </div>
       ))}
     </div>

@@ -1,5 +1,10 @@
 /* TODO: Add sitewide styles */
 
+body {
+  font-family:'Times New Roman', Times, serif
+}
+
+
 .error_message {
   color: red;
   font-size: 15px;
