@@ -19,7 +19,7 @@ const spots = [
     lng: -122.4730327,
     name: "BeachFront Loft",
     description:
-      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium. Suspendisse tincidunt justo et risus dapibus tempor. Donec risus nibh, gravida a nunc eget, ullamcorper mattis nisi.",
+      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium.",
     price: 150,
   },
   {
@@ -32,7 +32,7 @@ const spots = [
     lng: -120.4730327,
     name: "Glass cottage",
     description:
-      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium. Suspendisse tincidunt justo et risus dapibus tempor. Donec risus nibh, gravida a nunc eget, ullamcorper mattis nisi.",
+      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium.",
     price: 160,
   },
   {
@@ -45,7 +45,7 @@ const spots = [
     lng: -34.4730327,
     name: "Cotswolds",
     description:
-      "We are Pet Friendly!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium. Suspendisse tincidunt justo et risus dapibus tempor. Donec risus nibh, gravida a nunc eget, ullamcorper mattis nisi. ",
+      "We are Pet Friendly!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium. ",
     price: 200,
   },
   {
@@ -58,7 +58,7 @@ const spots = [
     lng: -39.4730327,
     name: "Pinhoti Peak",
     description:
-      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium. Suspendisse tincidunt justo et risus dapibus tempor. Donec risus nibh, gravida a nunc eget, ullamcorper mattis nisi. ",
+      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium. ",
     price: 210,
   },
   {
@@ -71,7 +71,7 @@ const spots = [
     lng: -36.4730327,
     name: "Villa Edge",
     description:
-      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium. Suspendisse tincidunt justo et risus dapibus tempor. Donec risus nibh, gravida a nunc eget, ullamcorper mattis nisi.",
+      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium.",
     price: 180,
   },
   {
@@ -84,7 +84,7 @@ const spots = [
     lng: -106.4730327,
     name: "Villa Irina",
     description:
-      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium. Suspendisse tincidunt justo et risus dapibus tempor. Donec risus nibh, gravida a nunc eget, ullamcorper mattis nisi.",
+      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium",
     price: 190,
   },
   {
@@ -97,7 +97,7 @@ const spots = [
     lng: -106.4730327,
     name: "Luxury Apartment ",
     description:
-      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium. Suspendisse tincidunt justo et risus dapibus tempor. Donec risus nibh, gravida a nunc eget, ullamcorper mattis nisi.",
+      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium.",
     price: 220,
   },
   {
@@ -110,7 +110,7 @@ const spots = [
     lng: -106.4730327,
     name: "The WonderINN",
     description:
-      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium. Suspendisse tincidunt justo et risus dapibus tempor. Donec risus nibh, gravida a nunc eget, ullamcorper mattis nisi.",
+      "We are Pet Friendly!!!!!!!Place where web developers are createdLorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse quis posuere magna, vel posuere sem. Vivamus aliquam faucibus tortor, ac posuere nulla vehicula pretium.",
     price: 240,
   },
 ];
