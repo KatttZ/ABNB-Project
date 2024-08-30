@@ -9,7 +9,7 @@ const SpotList = () => {
   const [toolTip, setToolTip] = useState(null);
 
   const spots = useSelector((state) => state.spots);
-  const spotsArray = Object.values(spots).filter(spot => spot !== undefined);
+  const spotsArray = Object.values(spots).filter((spot) => spot !== undefined);
 
   useEffect(() => {
     dispatch(getAllSpots());
@@ -21,29 +21,34 @@ const SpotList = () => {
       {spotsArray.map((spot) => (
         <div
           key={spot?.id}
+          className="spot_container"
           onMouseOut={() => setToolTip(null)}
           onMouseOver={() => setToolTip(spot.id)}
-          className="spot_container"
         >
           <Link key={spot?.id} to={`/spots/${spot.id}`} className="spot_link">
             <img src={spot.previewImage} alt={spot.name} />
 
-            <div className="spot_preview">
+            <div className="spot_info">
               <div>
                 {spot.city}, {spot.state}
               </div>
               <div>
                 ⭐️{" "}
                 {spot.avgRating && spot.avgRating !== "No rating yet."
-                  ? spot.avgRating
+                  ? spot.avgRating.toFixed(1)
                   : "New"}
               </div>
             </div>
+
             <span className="spot_price">${spot.price}</span>
             <span> night</span>
           </Link>
-          {toolTip === spot.id? <h4 >{spot.name}</h4> : <h3 className="no-show">Keeping Space</h3>}
-                
+
+          {toolTip === spot.id ? (
+            <h4>{spot.name}</h4>
+          ) : (
+            <h2>Spacing</h2>
+          )}
         </div>
       ))}
     </div>

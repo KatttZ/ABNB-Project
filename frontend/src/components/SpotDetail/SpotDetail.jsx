@@ -36,7 +36,9 @@ const SpotDetail = () => {
   return (
     <div className="spotDetail_container">
       <h2>{spot.name}</h2>
-      <p>{spot.city}, {spot.state}, {spot.country}</p>
+      <p>
+        {spot.city}, {spot.state}, {spot.country}
+      </p>
       <SpotImage spotId={spotId} />
 
       <div className="spotDetail_inner_container">
@@ -53,15 +55,21 @@ const SpotDetail = () => {
             <span> /night</span>
 
             <span className="star_rating">
-              ⭐️ {averageRating} · {hasReviews ? reviews.Reviews.length : 0}{" "}
-              {reviews?.Reviews.length === 1 ? "Review" : "Reviews"}
+              {averageRating ? (
+                <span>
+                  ⭐️ {averageRating} ·{" "}
+                  {hasReviews ? reviews.Reviews.length : 0}{" "}
+                  {reviews?.Reviews.length === 1 ? "Review" : "Reviews"}
+                </span>
+              ) : (
+                <span>⭐️ NEW</span>
+              )}
             </span>
           </div>
           <button onClick={handleReservation}>Reserve</button>
         </div>
-
       </div>
-      
+
       <ReviewList spotId={spotId} />
     </div>
   );

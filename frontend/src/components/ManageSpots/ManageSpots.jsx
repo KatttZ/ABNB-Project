@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { loadCurrentSpots, deleteSpot } from "../../store/spot";
 import { useModal } from '../../context/Modal';
-import ConfirmDeleteModal from '../ConfirmDeletionModal';
 import './ManageSpots.css'
 
 const ManageSpots = () => {
@@ -25,14 +24,21 @@ const ManageSpots = () => {
 
     const handleDeleteClick = (spotId) => {
         setModalContent(
-          <ConfirmDeleteModal
-            onDelete={() => handleDeleteConfirm(spotId)}
-            onClose={closeModal}
-            message="Are you sure you want to remove this spot?"
-            type="Spot"
-          />
+          <div className="confirm_deletion">
+            <h2>Confirm Delete</h2>
+            <p>Are you sure you want to remove this spot?</p>
+            <button
+              id="red_button"
+              onClick={() => handleDeleteConfirm(spotId)}
+            >
+              Yes (Delete Spot)
+            </button>
+            <button id="grey_button" onClick={closeModal}>
+              No (Keep Spot)
+            </button>
+          </div>
         );
-    };
+      };
     
     const handleDeleteConfirm = async (spotId) => {
         await dispatch(deleteSpot(spotId));

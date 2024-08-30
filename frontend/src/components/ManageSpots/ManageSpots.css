@@ -1,5 +1,5 @@
 .spotList_small_container {
-  width: 200px;
+  width: 240px;
   margin: 20px 20px 0px 0px;
 }
 
@@ -10,8 +10,10 @@
 
 .spotList_small_container img {
   height: 200px;
-  width: 200px;
+  width: 240px;
   object-fit: cover;
+  border-radius: 10px;
+
 }
 
 .spotList_preview {

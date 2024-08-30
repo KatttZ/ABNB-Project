@@ -1,38 +1,75 @@
+.reviewlist_container {
+  margin-bottom: 70px;
+}
+
 .reviewlist_container h3 {
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-weight: 500;
-  }
-  
-  .reviewlist_container {
-    margin-bottom: 70px;
-  }
-  
-  .post-review-button {
-    padding: 5px 20px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 14px;
-    background-color: #ff5a60;
-  }
-  
-  .delete-review-button {
-    padding: 5px 20px;
-    border: none;
-    border-radius: 5px;
-    color: white;
-    font-size: 14px;
-    background-color: #ff5a60;
-  }
-  
-  .post-review-button:hover {
-    cursor: pointer;
-    background-color: #fb7a7e;
-  }
-  
-  .delete-review-button:hover {
-    cursor: pointer;
-    background-color: #fb7a7e;
-  }
-  
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.post-review-button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  background-color: #ff5a60;
+  margin-bottom: 5px;
+}
+
+.post-review-button:hover {
+  cursor: pointer;
+  background-color: #fb7a7e;
+}
+
+.reviewList_small_container {
+  border-bottom: 1px solid rgb(189, 189, 189);
+}
+
+.delete-review-button {
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 14px;
+  background-color: #ff5a60;
+  margin-bottom: 5px;
+}
+
+.delete-review-button:hover {
+  cursor: pointer;
+  background-color: #fb7a7e;
+}
+
+/* confirm deletion */
+.confirm_deletion {
+  display: grid;
+  text-align: center;
+  padding: 20px;
+}
+
+.confirm_deletion button {
+  margin: 5px;
+}
+
+#red_button {
+  border: none;
+  border-radius: 2px;
+  color: white;
+  background-color: #f86b70;
+}
+#red_button:hover {
+  background-color: #ef4348;
+}
+
+#grey_button {
+  border: none;
+  border-radius: 2px;
+  color: white;
+  background-color: rgb(139, 138, 138);
+}
+
+#grey_button:hover {
+  background-color: rgb(94, 94, 94);
+}

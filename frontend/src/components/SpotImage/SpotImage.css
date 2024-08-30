@@ -8,7 +8,6 @@
 .spotImages_container img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -17,7 +16,7 @@
   grid-row: span 2;
 }
 
-.small_image {
+.small_images {
   grid-column: span 1;
   grid-row: span 1;
 }

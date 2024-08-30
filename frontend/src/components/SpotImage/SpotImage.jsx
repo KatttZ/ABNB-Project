@@ -13,25 +13,22 @@ const SpotImage = ({spotId}) => {
 
     if (!spot || !spot.SpotImages) return null;
 
-    const previewImage = spot.SpotImages.filter(image => image.preview === true);
+    const largeImage = spot.SpotImages.find(image => image.preview === true);
     const smallImages = spot.SpotImages.filter(image => image.preview === false);
-    console.log(smallImages);
-
+  
     return (
         <div className="spotImages_container">
-            <div className="large_image image">
-                <img src={previewImage[0].url} alt={spot.name} />
+            <div className="large_image">
+                <img src={largeImage.url} alt={spot.name} />
             </div>
             {smallImages.map((image) => (
-                <div className="small_image image" key={image.id}>
+                <div className="small_images" key={image.id}>
                     <img src={image.url} alt={image.id} />
                 </div>
             ))}
-
         </div>
-       
     )
-
+    
 }
 
 export default SpotImage;
