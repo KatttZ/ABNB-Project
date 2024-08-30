@@ -52,10 +52,8 @@ export const getAllSpots = () => async (dispatch) => {
     const spots = await response.json();
     dispatch(getSpots(spots.Spots));
     return spots;
-  } else {
-    const error = await response.json();
-    return error;
-  }
+  } 
+  return await response.json();
 };
 
 export const getOneSpot = (spotId) => async (dispatch) => {
@@ -64,10 +62,8 @@ export const getOneSpot = (spotId) => async (dispatch) => {
     const spot = await response.json();
     dispatch(getSingleSpot(spot));
     return spot;
-  } else {
-    const error = await response.json();
-    return error;
-  }
+  } 
+  return await response.json();
 };
 
 export const loadCurrentSpots = () => async (dispatch) => {
@@ -76,10 +72,8 @@ export const loadCurrentSpots = () => async (dispatch) => {
     const spots = await response.json();
     dispatch(getSpots(spots.Spots));
     return spots.Spots;
-  } else {
-    const error = await response.json();
-    return error;
-  }
+  } 
+  return await response.json();
 };
 
 export const createSpot = (spot) => async (dispatch) => {
@@ -122,13 +116,10 @@ export const deleteSpot = (spotId) => async (dispatch) => {
   if (response.ok) {
     dispatch(removeSpot(spotId));
     return { message: "Successfully deleted" };
-  } else {
-    const error = await response.json();
-    return error;
-  }
+  } 
+  return await response.json();
 };
 
-// Add Image Thunk
 export const addImage = (image) => async (dispatch) => {
   const { spotId, url, preview } = image;
   const response = await csrfFetch(`/api/spots/${spotId}/images`, {
@@ -140,10 +131,8 @@ export const addImage = (image) => async (dispatch) => {
     const newImage = await response.json();
     dispatch(createImage(newImage));
     return newImage;
-  } else {
-    const error = await response.json();
-    return error;
   }
+  return await response.json();
 };
 
 //! Reducer

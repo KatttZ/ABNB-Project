@@ -38,10 +38,8 @@ export const getSpotReviews = (spotId) => async (dispatch) => {
     const reviews = await response.json();
     dispatch(loadSpotReviews({ spotId, reviews }));
     return reviews;
-  } else {
-    const error = await response.json();
-    return error;
-  }
+  } 
+  return await response.json();
 };
 
 export const createReview = (review, spotId) => async (dispatch) => {
@@ -54,10 +52,8 @@ export const createReview = (review, spotId) => async (dispatch) => {
     const newReview = await response.json();
     dispatch(addReview(newReview));
     return newReview;
-  } else {
-    const error = await response.json();
-    return error;
-  }
+  } 
+  return await response.json();
 };
 
 export const deleteReview = (reviewId, spotId) => async (dispatch) => {
@@ -67,10 +63,8 @@ export const deleteReview = (reviewId, spotId) => async (dispatch) => {
   if (response.ok) {
     dispatch(removeReview(reviewId, spotId));
     return { message: "Successfully deleted" };
-  } else {
-    const error = await response.json();
-    return error;
-  }
+  } 
+  return await response.json();
 };
 
 
@@ -117,3 +111,4 @@ const reviewsReducer = (state = initialState, action) => {
 };
 
 export default reviewsReducer;
+

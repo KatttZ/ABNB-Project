@@ -9,7 +9,7 @@ const SpotList = () => {
   const [toolTip, setToolTip] = useState(null);
 
   const spots = useSelector((state) => state.spots);
-  const spotsArray = Object.values(spots);
+  const spotsArray = Object.values(spots).filter(spot => spot !== undefined);
 
   useEffect(() => {
     dispatch(getAllSpots());
@@ -20,15 +20,12 @@ const SpotList = () => {
     <div className="spotsList_container">
       {spotsArray.map((spot) => (
         <div
-          key={spot.id}
+          key={spot?.id}
           onMouseOut={() => setToolTip(null)}
           onMouseOver={() => setToolTip(spot.id)}
           className="spot_container"
         >
-          <Link
-            to={`/spots/${spot.id}`}
-            className="spot_link"
-          >
+          <Link key={spot?.id} to={`/spots/${spot.id}`} className="spot_link">
             <img src={spot.previewImage} alt={spot.name} />
 
             <div className="spot_preview">
