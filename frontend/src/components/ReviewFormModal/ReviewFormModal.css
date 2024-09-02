@@ -7,6 +7,18 @@
   height: 50px;
 }
 
+.review_form button{
+  border-radius: 10px;
+  transition-duration: 0.4s;
+}
+
+.review_form button:hover{
+  background-color: #04AA6D; 
+  color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
 .star_div {
   display: grid;
   grid-template-columns: 3fr 1fr;

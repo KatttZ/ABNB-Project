@@ -12,7 +12,9 @@
 .sign_up_container form label {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between;
+     */
+     justify-content: center;
     gap: 10px;
     margin-bottom: 3px;
     width: 100%;
@@ -20,9 +22,16 @@
 
 
 .sign_up_container button {
+    border-radius: 10px;
     margin:5px;
     width:200px;
     height:30px;
+}
+
+.sign_up_container button:hover {
+    background-color: #04AA6D; 
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
 .sign_up_container input {

@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { getAllSpots } from "../../store/spot";
 import "./SpotList.css";
 
 const SpotList = () => {
   const dispatch = useDispatch();
   const [toolTip, setToolTip] = useState(null);
+  const navigate = useNavigate();
 
   const spots = useSelector((state) => state.spots);
   const spotsArray = Object.values(spots).filter((spot) => spot !== undefined);
@@ -24,6 +25,7 @@ const SpotList = () => {
           className="spot_container"
           onMouseOut={() => setToolTip(null)}
           onMouseOver={() => setToolTip(spot.id)}
+          onClick={()=> navigate(`/spots/${spot.id}`)}
         >
           <Link key={spot?.id} to={`/spots/${spot.id}`} className="spot_link">
             <img src={spot.previewImage} alt={spot.name} />

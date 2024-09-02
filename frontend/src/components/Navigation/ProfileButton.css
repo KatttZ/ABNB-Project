@@ -4,10 +4,30 @@
     align-items: flex-end;
 }
 
+.profile_container button {
+   background-color: #fb7478;
+   color:white;
+   border-radius: 3px;
+   border:none;
+}
+
 #create_link a {
     text-decoration: none;
     color: #ff5a60;
     font-weight: 500;
     text-wrap: nowrap;
     padding-right: 10px; 
+}
+.logined {
+    width: 145px;
+}
+.logout {
+    border-radius: 10px;
+    transition-duration: 0.4s;
+}
+
+.logout:hover {
+    background-color: #04AA6D; 
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }

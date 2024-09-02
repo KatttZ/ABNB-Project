@@ -44,7 +44,10 @@
 
 .star_rating {
     padding-left: 50px;
-  }
+    
+    /* display: flex;
+    justify-content: end; */
+}
 
 .reservation_container button {
   padding: 10px 30px;
