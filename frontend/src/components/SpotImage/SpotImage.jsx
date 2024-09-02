@@ -12,6 +12,7 @@ const SpotImage = ({spotId}) => {
     }, [dispatch, spotId]);
 
     if (!spot || !spot.SpotImages) return null;
+    // console.log(spot.SpotImages)
 
     const largeImage = spot.SpotImages.find(image => image.preview === true);
     const smallImages = spot.SpotImages.filter(image => image.preview === false);

@@ -92,7 +92,7 @@ const CreateSpot = (spot = {}) => {
       { spotId: newSpot.id, preview: false, url: image4 },
       { spotId: newSpot.id, preview: false, url: image5 },
     ];
-    console.log(imageArray);
+
     await Promise.all(imageArray.map((image) => dispatch(addImage(image))));
 
     if (newSpot.errors) {

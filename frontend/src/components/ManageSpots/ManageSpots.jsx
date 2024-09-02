@@ -1,19 +1,19 @@
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { loadCurrentSpots, deleteSpot } from "../../store/spot";
 import { useModal } from '../../context/Modal';
 import './ManageSpots.css'
 
 const ManageSpots = () => {
     const { setModalContent, closeModal } = useModal();
+    const navigate = useNavigate();
 
     const dispatch = useDispatch();
     const currentUser = useSelector((state) => state.session.user);
     const spots = useSelector((state) => state.spots);
     const spotsArray = Object.values(spots);
     const filteredSpots = spotsArray.filter(spot => spot?.ownerId === currentUser?.id)
-    console.log("spotsArray", spotsArray);
 
 
     useEffect(() => {
@@ -66,7 +66,7 @@ const ManageSpots = () => {
             </Link>
 
             <div className="current_spotList_buttons">
-                <button><Link to={`/spots/${spot.id}/edit`}>Update</Link></button>
+                <button onClick={()=> navigate(`/spots/${spot.id}/edit`)}><Link to={`/spots/${spot.id}/edit`}>Update</Link></button>
                 <button onClick={() => handleDeleteClick(spot.id)}>Delete</button>
             </div>
 

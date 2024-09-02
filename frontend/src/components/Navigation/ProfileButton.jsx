@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { useNavigation, Link } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { FaUserCircle } from "react-icons/fa";
 import * as sessionActions from "../../store/session";
 import OpenModalMenuItem from "./OpenModalMenuItem";
@@ -12,7 +12,7 @@ function ProfileButton({ user }) {
   const dispatch = useDispatch();
   const [showMenu, setShowMenu] = useState(false);
   const ulRef = useRef();
-  const navigate = useNavigation();
+  const navigate = useNavigate();
 
   const toggleMenu = (e) => {
     e.stopPropagation(); // Keep from bubbling up to document and triggering closeMenu
@@ -59,7 +59,7 @@ function ProfileButton({ user }) {
             <li>{user.email}</li>
             <li><Link to={'/spots/current'}>Manage Spots</Link></li>
             <li>
-              <button onClick={logout}>Log Out</button>
+              <button className='logout' onClick={logout}>Log Out</button>
             </li>
           </>
         ) : (
