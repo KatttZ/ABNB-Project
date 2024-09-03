@@ -29,6 +29,11 @@
   margin: 10px 0px;
 }
 
+.callout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
 .reservation_container * {
   margin: 5px 0px;
@@ -44,9 +49,6 @@
 
 .star_rating {
     padding-left: 50px;
-    
-    /* display: flex;
-    justify-content: end; */
 }
 
 .reservation_container button {
@@ -58,6 +60,7 @@
   font-size: 15px;
   background-color: #ff5a60;
   width: 95%;
+  
 }
 
 .reservation_container button:hover {

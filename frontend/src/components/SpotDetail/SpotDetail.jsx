@@ -50,10 +50,13 @@ const SpotDetail = () => {
         </div>
 
         <div className="reservation_container">
-          <div>
+          <div className="callout">
+            <div className="price_info">
             <span id="spot_price">${spot.price}</span>
             <span> /night</span>
+            </div>
 
+            <div className="rating_info">
             <span className="star_rating">
               {averageRating ? (
                 <span>
@@ -65,9 +68,12 @@ const SpotDetail = () => {
                 <span>⭐️ NEW</span>
               )}
             </span>
+            </div>
           </div>
+
           <button onClick={handleReservation}>Reserve</button>
         </div>
+
       </div>
 
       <ReviewList spotId={spotId} />

@@ -55,6 +55,7 @@ const CreateSpot = (spot = {}) => {
     if (!description || description.length < 30)
       error.description = "Description needs 30 or more characters";
     if (!price) error.price = "Price is required";
+    if (price <= 0) error.price = "Price is invalid";
     if (!name) error.name = "Name is required";
     if (!previewImage) error.previewUrl = "Preview image is required.";
     return error;
@@ -91,7 +92,7 @@ const CreateSpot = (spot = {}) => {
       { spotId: newSpot.id, preview: false, url: image3 },
       { spotId: newSpot.id, preview: false, url: image4 },
       { spotId: newSpot.id, preview: false, url: image5 },
-    ];
+    ].filter(image => image.url.trim() !== "");
 
     await Promise.all(imageArray.map((image) => dispatch(addImage(image))));
 
