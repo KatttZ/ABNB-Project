@@ -43,15 +43,33 @@ router.post(
       where:{[Op.or]:{username:username, email:email}}
     })
 
-    if (existUser){
-      if(existUser.email === email || existUser.username === username){
+    // if (existUser){
+    //   if(existUser.email === email || existUser.username === username){
+    //     return res.status(500).json({
+    //       message: "User already exists",
+    //       error:{
+    //         email:"User with that email already exists",
+    //         username:"User with that username already exists",
+    //       }
+    //     })
+    //   }
+    // }
+   
+    if (existUser) {
+      if (existUser.email === email) {
         return res.status(500).json({
           message: "User already exists",
-          error:{
-            email:"User with that email already exists",
-            username:"User with that username already exists",
-          }
-        })
+          errors: {
+            email: "User with that email already exists",
+          },
+        });
+      } else if (existUser.username === username) {
+        return res.status(500).json({
+          message: "User already exists",
+          errors: {
+            username: "User with that username already exists",
+          },
+        });
       }
     }
 
