@@ -54,8 +54,7 @@ const CreateSpot = (spot = {}) => {
       error.lng = "Longitude must be within -180 and 180";
     if (!description || description.length < 30)
       error.description = "Description needs 30 or more characters";
-    if (!price) error.price = "Price is required";
-    if (price <= 0) error.price = "Price is invalid";
+    if (!price || price <= 0) error.price = "Price is required";
     if (!name) error.name = "Name is required";
     if (!previewImage) error.previewUrl = "Preview image is required.";
     return error;

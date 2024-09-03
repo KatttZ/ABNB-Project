@@ -53,7 +53,7 @@ const EditSpot = () => {
       error.lng = "Longitude must be within -180 and 180";
     if (!description || description.length < 30)
       error.description = "Description needs 30 or more characters";
-    if (!price) error.price = "Price is required";
+    if (!price || price <= 0) error.price = "Price is required";
     if (!name) error.name = "Name is required";
     return error;
   };
