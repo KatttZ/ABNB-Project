@@ -132,7 +132,7 @@ function SignupFormModal() {
         )} */}
         <button type="submit"
         //  disabled={Object.values(errors).length > 0}
-        disabled={( password.length < 6 || confirmPassword.length < 1 || username.length < 4 || firstName.length < 1 || lastName.length < 1 || email.length < 1)}
+        disabled={( password.length < 6 || confirmPassword.length < 6 || username.length < 4 || firstName.length < 1 || lastName.length < 1 || email.length < 1)}
     
          >Sign Up
         </button>
