@@ -48,7 +48,7 @@ const ManageSpots = () => {
     return (
         <div className="current_spotList_container">
             <h1>Manage Spots</h1>
-            <button className="create_spot"><Link to={"/spots/new"}>Create a New Spot</Link></button>
+            <button onClick={()=> navigate("/spots/new")} className="create_spot"><Link to={"/spots/new"}>Create a New Spot</Link></button>
 
             <div className="current_image_container">
             {filteredSpots
