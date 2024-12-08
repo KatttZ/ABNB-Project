@@ -2,11 +2,11 @@
 
 Vacation Bnb is an airbnb clone where users can browse, review and create a spot.
 
-# Preview
+## Preview
 
 ![image](showcase.png)
 
-# Technologies Used
+## Technologies Used
 
 - Backend
   - Express
@@ -18,9 +18,9 @@ Vacation Bnb is an airbnb clone where users can browse, review and create a spot
   - CSS
 
 
-# How to Launch
+## How to Launch
 
-## Backend Setup
+### Backend Setup
 
 - `cd` into `/backend` folder
 - run `npm install` 
@@ -29,7 +29,7 @@ Vacation Bnb is an airbnb clone where users can browse, review and create a spot
 - run `npx dotenv sequelize db:seed:all`
 - run `npm start`
 
-## Frontend Setup
+### Frontend Setup
 
 - `cd` into `/frontend` folder
 - run `npm install` 
